@@ -7,32 +7,23 @@ import { Contact } from './model/Contact';
 })
 export class ContactService {
 
+  // Keep in mind these should behave asynchronusly
+
   constructor() { }
 
-  getMessageBundle(): Promise<any> {
-    return Promise.resolve({
-      'form.label.title': 'Contact',
-      'form.label.name': 'Name:',
-      'form.label.address': 'Address:',
-      'form.label.city': 'City:',
-      'form.label.state': 'State:',
-      'form.label.zipcode': 'Zip Code:',
-      'form.button.submit': 'Submit',
-      'form.button.cancel': 'Cancel'
-    });
+  // The following method should return a key:value object for any static text needed for the view
+  // Ex. 'form.label.title': 'Contact'
+  getMessageBundle() {
+    
   }
 
-  getStates(): Promise<{value: string, display: string}[]> {
-    return Promise.resolve([
-      {value: "CA", display: "California"},
-      {value: "FL", display: "Florida"},
-      {value: "NY", display: "New York"},
-      {value: "TX", display: "Texas"},
-      {value: "VA", display: "Virginia"}    
-    ]);
+  // The following method should return a list of states used in the select input
+  getStates(){
+
   }
 
-  saveContacts(contacts: Contact[] | Partial<Contact>[]): Promise<string> {
-    return Promise.resolve('success');
+  // The following method should accept the form values and return a success msg
+  saveContacts() {
+   
   }
 }
