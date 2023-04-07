@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Contact } from './model/Contact';
 
 
 @Injectable({
@@ -29,7 +30,7 @@ export class ContactService {
     ]);
   }
 
-  saveContacts(): Promise<string> {
+  saveContacts(contacts: Contact[] | Partial<Contact>[]): Promise<string> {
     return Promise.resolve('success');
   }
 }

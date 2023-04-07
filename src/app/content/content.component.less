@@ -3,8 +3,17 @@
 }
 
 .example-headers-align .mat-expansion-panel-header-description {
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.flex-row-end:extend(.flex-row){
+    justify-content: flex-end;
 }
 
 .mat-expansion-panel-header {
