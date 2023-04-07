@@ -16,7 +16,9 @@ export class ContactService {
       'form.label.address': 'Address:',
       'form.label.city': 'City:',
       'form.label.state': 'State:',
-      'form.label.zipcode': 'Zip Code:'
+      'form.label.zipcode': 'Zip Code:',
+      'form.button.submit': 'Submit',
+      'form.button.cancel': 'Cancel'
     });
   }
 
